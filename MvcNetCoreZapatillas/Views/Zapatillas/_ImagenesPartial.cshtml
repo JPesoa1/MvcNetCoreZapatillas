@@ -1,0 +1,45 @@
+﻿@model List<ImagenZapatilla>
+
+ <div id="contenido" ></div>
+    <hr />
+
+    <button id="primero">PRIMERO</button>
+    <button id="anterior">ANTERIOR</button>
+    <button id="siguiente">SIQUIENTE</button>
+    <button id="ultimo">ULTIMO</button>
+
+    @foreach(ImagenZapatilla imagen in Model)
+    {
+        <img style="width:250px;height:250px" src="@imagen.Imagen" />
+    
+    }
+   
+
+    
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $("#primero").click(function() {
+                window.load("/Zapatillas/Details?id=idproducto");
+            });
+            
+            $("#anterior").click(function() {
+                load("/Zapatillas/Details?id=idproducto");
+            });
+
+            $("#siguiente").click(function() {
+                load("/Zapatillas/Details?id=idproducto");
+            });
+
+            $("#ultimo").click(function() {
+
+                console.log("click");
+                 
+            });
+
+           
+        })
+    </script>
+ }
+
+ 
